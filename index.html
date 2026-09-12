@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Samuel Joe D'Souza — builds agents, wearables, and attack-forecasting models. Mumbai.">
+  <meta name="author" content="Samuel Joe D'Souza">
+  <meta property="og:title" content="Samuel D'Souza — pok8.me">
+  <meta property="og:description" content="Agents, firmware, vision, and network forecasting — shipped, not slides.">
+  <meta property="og:url" content="https://pok8.me">
+  <meta property="og:type" content="website">
+  <title>Samuel D'Souza — pok8.me</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css?v=paper">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%2314110e' width='32' height='32'/><text x='4' y='23' font-family='monospace' font-size='14' fill='%23e24a1c'>p8</text></svg>">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="bar">
+    <a class="mark" href="#top">pok8<span>me</span></a>
+    <div class="bar-track" aria-hidden="true"><i id="scroll-progress"></i></div>
+    <nav class="bar-nav">
+      <a href="#work">work</a>
+      <a href="#lab">lab</a>
+      <a href="#stack">stack</a>
+      <a href="#contact">ping</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <nav class="drawer" hidden>
+    <a href="#work">work</a>
+    <a href="#lab">lab</a>
+    <a href="#stack">stack</a>
+    <a href="#contact">ping</a>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <canvas id="net" aria-hidden="true"></canvas>
+      <div class="hero-inner">
+        <p class="kicker">
+          <span class="live"></span>
+          Mumbai · <span id="clock">--:--</span> IST · B.Tech AIML
+        </p>
+        <h1>
+          <span class="line">Samuel</span>
+          <span class="line italic">D'Souza</span>
+        </h1>
+        <p class="lede">
+          I ship the messy middle — agents that call tools,
+          watches that update over the air, models that try to
+          see an attack <em>before</em> it lands.
+        </p>
+        <p class="rotator" aria-live="polite">
+          currently <span id="rotator-word">forecasting packets</span>
+        </p>
+        <div class="hero-row">
+          <a class="btn" href="#lab" data-magnetic>open the lab</a>
+          <a class="linkish" href="https://github.com/Pok8TheCoder" target="_blank" rel="noopener">github/Pok8TheCoder</a>
+        </div>
+        <ul class="meters">
+          <li><b data-count="40">0</b><span>projects</span></li>
+          <li><b data-count="16">0</b><span>repos</span></li>
+          <li><b data-count="85">0</b><span>PRISM F1%</span></li>
+          <li><b data-count="70">0</b><span>firmware commits</span></li>
+        </ul>
+      </div>
+      <aside class="tele">
+        <header>// live bench</header>
+        <ol id="tele-log"></ol>
+      </aside>
+      <a class="scroll-hint" href="#about">scroll the bench</a>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>agent loops</span><span>ESP32 OTA</span><span>world models</span><span>YOLOv9</span>
+        <span>NimBLE</span><span>InsightFace</span><span>FastAPI</span><span>PyTorch</span>
+        <span>mmWave radar</span><span>XTTS streaming</span><span>MITRE ATT&CK</span><span>llama.cpp</span>
+        <span>agent loops</span><span>ESP32 OTA</span><span>world models</span><span>YOLOv9</span>
+        <span>NimBLE</span><span>InsightFace</span><span>FastAPI</span><span>PyTorch</span>
+        <span>mmWave radar</span><span>XTTS streaming</span><span>MITRE ATT&CK</span><span>llama.cpp</span>
+      </div>
+    </div>
+
+    <section id="about" class="paper">
+      <div class="wrap about">
+        <div class="about-copy">
+          <p class="eyebrow">about</p>
+          <h2>Not a stack tourist. I stay until it boots on the real board.</h2>
+          <p>
+            Most of my work lives in the gap between a working demo and a production constraint:
+            4&nbsp;MB of flash, a 60-student classroom, a false-positive rate a SOC won't tolerate.
+            I treat those limits as the brief, not a later problem.
+          </p>
+          <p>
+            Right now that's <strong>PRISM</strong> with Aryan &amp; Shaun — transformer world models
+            on network traffic — and firmware at <strong>Mozek Healthtech</strong> for the G1 band
+            and Saathi sleep device.
+          </p>
+        </div>
+        <div class="domain-board">
+          <div class="domain-visual" id="domain-visual" aria-hidden="true">
+            <svg viewBox="0 0 320 280" id="domain-svg"></svg>
+          </div>
+          <div class="domain-list" role="list">
+            <button class="domain is-on" data-domain="agents" role="listitem">
+              <b>Agents</b>
+              <span>tool loops before function-calling existed, Gemini + XTTS desktop, Groq narrative bots</span>
+            </button>
+            <button class="domain" data-domain="security" role="listitem">
+              <b>Security ML</b>
+              <span>K-step attack forecasts, 222 MITRE techniques, Docker red/blue labs</span>
+            </button>
+            <button class="domain" data-domain="firmware" role="listitem">
+              <b>Firmware</b>
+              <span>ESP32 OTA on a dying flash budget, NimBLE, mmWave sleep radar</span>
+            </button>
+            <button class="domain" data-domain="vision" role="listitem">
+              <b>Vision</b>
+              <span>PTZ classroom attendance, YOLOv9 bins, local OCR + statute RAG</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="ink">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="eyebrow">work</p>
+          <h2>Places that paid me to break things on purpose.</h2>
+        </header>
+        <div class="jobs">
+          <article class="job is-open" data-job="mozek">
+            <button class="job-tab">
+              <span class="job-when">Jun–Sep 2026</span>
+              <span class="job-who">Mozek Healthtech</span>
+              <span class="job-role">Firmware intern</span>
+              <i></i>
+            </button>
+            <div class="job-body">
+              <div class="job-text">
+                <p>Wearable health-tech in Boisar. G1 smart band, Saathi 7e sleep tracker. The interesting problem wasn't "write OTA" — it was fitting OTA onto a watch whose baseline already ate ~89% of 4&nbsp;MB flash, then merging it without bricking production units.</p>
+                <ul>
+                  <li>Standalone OTA on ESP32-PICO-D4, then a merge into the G-series baseline (~70 commits).</li>
+                  <li>Minimal SPIFFS / Large APP (~1.9&nbsp;MB slot), bitmap compression, UART + power-rail quirks.</li>
+                  <li>4-level ESP sleep machine; mmWave human-detect on Saathi 7e.</li>
+                  <li>Saathi-Server: Node/Express/WebSocket OTA + telemetry hub.</li>
+                </ul>
+              </div>
+              <div class="flash" aria-label="Flash budget">
+                <p class="flash-label">flash budget · G1 · 4 MB</p>
+                <div class="flash-bar">
+                  <div class="flash-used" style="--w:89%"><span>before 89%</span></div>
+                </div>
+                <div class="flash-bar after">
+                  <div class="flash-used signal" style="--w:52%"><span>app slot ~1.9 MB</span></div>
+                </div>
+                <p class="flash-note">The device also needed the power button held to stay on. That's a hardware sentence, not a software one.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="job" data-job="yolovx">
+            <button class="job-tab">
+              <span class="job-when">May 2026</span>
+              <span class="job-who">YOLOvX</span>
+              <span class="job-role">Vision intern</span>
+              <i></i>
+            </button>
+            <div class="job-body">
+              <div class="job-text">
+                <p>Trained and shipped a custom YOLOv9 detector for disposal bins — annotation through training through a published artifact. Not a pretrained demo with a new README.</p>
+                <p><a href="https://github.com/Pok8TheCoder/Garbage-Bin-Detector" target="_blank" rel="noopener">Garbage-Bin-Detector →</a></p>
+              </div>
+              <div class="bbox-art" aria-hidden="true">
+                <div class="bbox b1"><label>bin 0.94</label></div>
+                <div class="bbox b2"><label>bin 0.81</label></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="job" data-job="myclick">
+            <button class="job-tab">
+              <span class="job-when">Jun–Jul 2024</span>
+              <span class="job-who">Myclick</span>
+              <span class="job-role">IT support</span>
+              <i></i>
+            </button>
+            <div class="job-body">
+              <div class="job-text">
+                <p>Goregaon. Front-line hardware, software, and web issues at a company that actually ships sites. Learned how to talk to a stuck human before talking to a stuck machine.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="lab" class="paper lab">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="eyebrow">lab</p>
+          <h2>Things I actually built.</h2>
+          <div class="filters" role="tablist">
+            <button class="chip is-on" data-filter="all">all</button>
+            <button class="chip" data-filter="agents">agents</button>
+            <button class="chip" data-filter="security">security</button>
+            <button class="chip" data-filter="vision">vision</button>
+            <button class="chip" data-filter="embedded">embedded</button>
+            <button class="chip" data-filter="campus">campus</button>
+          </div>
+        </header>
+
+        <div class="explorer">
+          <div class="stage" id="stage">
+            <div class="stage-art" id="stage-art" data-art="prism"></div>
+            <div class="stage-copy">
+              <p class="stage-kicker" id="stage-kicker">security · flagship</p>
+              <h3 id="stage-title">PRISM</h3>
+              <p id="stage-body">Temporal transformer world models that forecast network attacks K-steps ahead. Dual telemetry (NetFlow + Scapy), 85% F1 vs 54% logistic baseline, false positives cut from ~41% to 16.7%. 222 MITRE techniques. Docker attacker/target loop that retrains on evasions.</p>
+              <p class="stage-stack" id="stage-stack">PyTorch · Scapy · Docker · React · FastAPI</p>
+              <p class="stage-links" id="stage-links">
+                <a href="https://github.com/Pok8TheCoder/PRISM" target="_blank" rel="noopener">PRISM</a>
+                <a href="https://github.com/Pok8TheCoder/R.A.M" target="_blank" rel="noopener">R.A.M</a>
+                <a href="https://github.com/Pok8TheCoder/Automode" target="_blank" rel="noopener">Automode</a>
+              </p>
+            </div>
+          </div>
+          <ul class="catalog" id="catalog">
+            <li class="is-on" data-id="prism" data-tags="security">
+              <b>PRISM</b>
+              <span>attack forecasting</span>
+            </li>
+            <li data-id="pixie" data-tags="agents">
+              <b>Pixie</b>
+              <span>desktop avatar</span>
+            </li>
+            <li data-id="insight" data-tags="campus agents">
+              <b>InsightForge</b>
+              <span>datathon canvas</span>
+            </li>
+            <li data-id="acams" data-tags="vision campus">
+              <b>ACAMS</b>
+              <span>classroom vision</span>
+            </li>
+            <li data-id="aiscanner" data-tags="vision agents">
+              <b>AIScanner</b>
+              <span>offline legal OCR</span>
+            </li>
+            <li data-id="captcha" data-tags="security">
+              <b>Behavioral CAPTCHA</b>
+              <span>mouse biometrics</span>
+            </li>
+            <li data-id="gptfn" data-tags="agents">
+              <b>gpt_functions…</b>
+              <span>pre-tools agent</span>
+            </li>
+            <li data-id="labshare" data-tags="campus">
+              <b>Labshare2</b>
+              <span>lab lending</span>
+            </li>
+            <li data-id="saathi" data-tags="embedded">
+              <b>Saathi-Server</b>
+              <span>OTA + telemetry</span>
+            </li>
+            <li data-id="glasses" data-tags="embedded vision agents">
+              <b>Spectacular Spectacles</b>
+              <span>Pi HUD glasses</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="ink stack-sec">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="eyebrow">stack</p>
+          <h2>The bench, not a keyword dump.</h2>
+        </header>
+        <div class="stack-grid">
+          <div>
+            <h3>talks to models</h3>
+            <p>Python, PyTorch, Lightning, Groq, Gemini, OpenRouter, llama.cpp, FAISS, PPO</p>
+          </div>
+          <div>
+            <h3>talks to silicon</h3>
+            <p>C/C++, ESP-IDF, Arduino, NimBLE, UART, OTA partitions, mmWave, Raspberry Pi, ADB</p>
+          </div>
+          <div>
+            <h3>talks to people</h3>
+            <p>FastAPI, Next.js, React, TypeScript, Node, WebSockets, PySide6, Jetpack Compose</p>
+          </div>
+          <div>
+            <h3>school</h3>
+            <p>B.Tech AIML, SJCEM · 2025–28 · diploma at Pravin Patil Polytechnic · Datathon / Hackverse / Hackstomp</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="signal">
+      <div class="wrap contact">
+        <p class="eyebrow light">ping</p>
+        <h2>If you want the walkthrough, not the pitch deck.</h2>
+        <a class="mail" href="mailto:samueljoedsouza@gmail.com">samueljoedsouza@gmail.com</a>
+        <div class="contact-row">
+          <a href="https://github.com/Pok8TheCoder" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/samuel-d-souza-694991279" target="_blank" rel="noopener">LinkedIn</a>
+          <span>Mumbai</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© 2026 Samuel Joe D'Souza</span>
+    <span>pok8.me · github pages</span>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
