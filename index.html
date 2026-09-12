@@ -70,7 +70,7 @@
           <li><b data-count="40">0</b><span>projects</span></li>
           <li><b data-count="16">0</b><span>repos</span></li>
           <li><b data-count="85">0</b><span>PRISM F1%</span></li>
-          <li><b data-count="70">0</b><span>firmware commits</span></li>
+          <li><b data-count="3">0</b><span>internships done</span></li>
         </ul>
       </div>
       <aside class="tele">
@@ -84,10 +84,10 @@
       <div class="ticker-track">
         <span>agent loops</span><span>ESP32 OTA</span><span>world models</span><span>YOLOv9</span>
         <span>NimBLE</span><span>InsightFace</span><span>FastAPI</span><span>PyTorch</span>
-        <span>mmWave radar</span><span>XTTS streaming</span><span>MITRE ATT&CK</span><span>llama.cpp</span>
+        <span>sleep firmware</span><span>XTTS streaming</span><span>MITRE ATT&CK</span><span>llama.cpp</span>
         <span>agent loops</span><span>ESP32 OTA</span><span>world models</span><span>YOLOv9</span>
         <span>NimBLE</span><span>InsightFace</span><span>FastAPI</span><span>PyTorch</span>
-        <span>mmWave radar</span><span>XTTS streaming</span><span>MITRE ATT&CK</span><span>llama.cpp</span>
+        <span>sleep firmware</span><span>XTTS streaming</span><span>MITRE ATT&CK</span><span>llama.cpp</span>
       </div>
     </div>
 
@@ -103,8 +103,7 @@
           </p>
           <p>
             Right now that's <strong>PRISM</strong> with Aryan &amp; Shaun — transformer world models
-            on network traffic — and firmware at <strong>Mozek Healthtech</strong> for the G1 band
-            and Saathi sleep device.
+            on network traffic. Previously: firmware internship at <strong>Mozek Healthtech</strong> (completed Sep 2026).
           </p>
         </div>
         <div class="domain-board">
@@ -122,7 +121,7 @@
             </button>
             <button class="domain" data-domain="firmware" role="listitem">
               <b>Firmware</b>
-              <span>ESP32 OTA on a dying flash budget, NimBLE, mmWave sleep radar</span>
+              <span>ESP32 OTA on a tight flash budget, NimBLE, sleep-state firmware</span>
             </button>
             <button class="domain" data-domain="vision" role="listitem">
               <b>Vision</b>
@@ -142,30 +141,24 @@
         <div class="jobs">
           <article class="job is-open" data-job="mozek">
             <button class="job-tab">
-              <span class="job-when">Jun–Sep 2026</span>
+              <span class="job-when">Jun–Sep 2026 · completed</span>
               <span class="job-who">Mozek Healthtech</span>
               <span class="job-role">Firmware intern</span>
               <i></i>
             </button>
             <div class="job-body">
               <div class="job-text">
-                <p>Wearable health-tech in Boisar. G1 smart band, Saathi 7e sleep tracker. The interesting problem wasn't "write OTA" — it was fitting OTA onto a watch whose baseline already ate ~89% of 4&nbsp;MB flash, then merging it without bricking production units.</p>
+                <p>Wearable health-tech in Boisar. Internship completed September 2026. The brief was getting over-the-air updates onto a production wearable that was already tight on flash, then making sure the rest of the fleet could actually receive them.</p>
                 <ul>
-                  <li>Standalone OTA on ESP32-PICO-D4, then a merge into the G-series baseline (~70 commits).</li>
-                  <li>Minimal SPIFFS / Large APP (~1.9&nbsp;MB slot), bitmap compression, UART + power-rail quirks.</li>
-                  <li>4-level ESP sleep machine; mmWave human-detect on Saathi 7e.</li>
-                  <li>Saathi-Server: Node/Express/WebSocket OTA + telemetry hub.</li>
+                  <li>Shipped OTA firmware and merged it into the production baseline.</li>
+                  <li>Built an OTA server (Node/Express/WebSocket) for check, download, and device updates.</li>
+                  <li>Added a multi-level sleep state machine to ease idle power strain.</li>
+                  <li>UART and hardware bring-up on the bench — flash budget and boot behavior as first-class constraints.</li>
                 </ul>
               </div>
               <div class="flash" aria-label="Flash budget">
-                <p class="flash-label">flash budget · G1 · 4 MB</p>
-                <div class="flash-bar">
-                  <div class="flash-used" style="--w:89%"><span>before 89%</span></div>
-                </div>
-                <div class="flash-bar after">
-                  <div class="flash-used signal" style="--w:52%"><span>app slot ~1.9 MB</span></div>
-                </div>
-                <p class="flash-note">The device also needed the power button held to stay on. That's a hardware sentence, not a software one.</p>
+                <p class="flash-label">constraint · production wearable · OTA</p>
+                <p class="flash-note">No spare flash, no spare power. The work was reducing strain on both until OTA could ship and stay shipped.</p>
               </div>
             </div>
           </article>
@@ -270,8 +263,8 @@
               <span>lab lending</span>
             </li>
             <li data-id="saathi" data-tags="embedded">
-              <b>Saathi-Server</b>
-              <span>OTA + telemetry</span>
+              <b>OTA server</b>
+              <span>device updates</span>
             </li>
             <li data-id="glasses" data-tags="embedded vision agents">
               <b>Spectacular Spectacles</b>
@@ -295,7 +288,7 @@
           </div>
           <div>
             <h3>talks to silicon</h3>
-            <p>C/C++, ESP-IDF, Arduino, NimBLE, UART, OTA partitions, mmWave, Raspberry Pi, ADB</p>
+            <p>C/C++, ESP-IDF, Arduino, NimBLE, UART, OTA partitions, Raspberry Pi, ADB</p>
           </div>
           <div>
             <h3>talks to people</h3>
@@ -328,6 +321,6 @@
     <span>pok8.me · github pages</span>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=ota"></script>
 </body>
 </html>

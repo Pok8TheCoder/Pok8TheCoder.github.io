@@ -81,10 +81,10 @@
   /* telemetry log */
   const lines = [
     "PRISM  window 5s  p(scan)=0.81",
-    "G1     ota slot  1.92 MB free-ish",
+    "OTA    check slot  ready",
     "PIXIE  xtts chunk  412ms",
     "ACAMS  face lock  bench-C",
-    "7e     mmWave  presence=1",
+    "ESP    sleep  idle=deep",
     "RAM    surprise snapshot k=3",
   ];
   const log = document.getElementById("tele-log");
@@ -179,7 +179,7 @@
   function drawFirmware() {
     el("rect", { x: 90, y: 70, width: 140, height: 150, rx: 28, fill: "none", stroke: "#efe8dc", "stroke-width": "2" });
     el("circle", { cx: 160, cy: 145, r: 36, fill: "none", stroke: "#e24a1c", "stroke-width": "3", "stroke-dasharray": "40 80" });
-    el("text", { x: 18, y: 36, fill: "#e24a1c", "font-size": "12", "font-family": "IBM Plex Mono" }).textContent = "G1  ·  4MB";
+    el("text", { x: 18, y: 36, fill: "#e24a1c", "font-size": "12", "font-family": "IBM Plex Mono" }).textContent = "OTA  ·  flash";
     el("text", { x: 118, y: 250, fill: "#b7ad9e", "font-size": "11", "font-family": "IBM Plex Mono" }).textContent = "OTA merged";
   }
   function drawVision() {
@@ -260,8 +260,8 @@
     saathi: {
       art: "saathi",
       kicker: "embedded · mozek",
-      title: "Saathi-Server",
-      body: "The other half of the watch. Node OTA check/download, WebSocket ACK protocol, telemetry ingest, night-session reports. HTTP fallback for when the radio is being a child.",
+      title: "OTA server",
+      body: "The other half of the wearable. Node OTA check/download, WebSocket ACK protocol, telemetry ingest. HTTP fallback for when the radio is being a child.",
       stack: "Node · Express · WebSockets · SQLite",
       links: [],
     },
