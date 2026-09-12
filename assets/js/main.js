@@ -200,6 +200,8 @@
       body: "Temporal transformer world models that forecast network attacks K-steps ahead. Dual telemetry (NetFlow + Scapy), 85% F1 vs 54% logistic baseline, false positives cut from ~41% to 16.7%. 222 MITRE techniques. Docker attacker/target loop that retrains on evasions.",
       stack: "PyTorch · Scapy · Docker · React · FastAPI",
       links: [["PRISM", "https://github.com/Pok8TheCoder/PRISM"], ["R.A.M", "https://github.com/Pok8TheCoder/R.A.M"], ["Automode", "https://github.com/Pok8TheCoder/Automode"]],
+      image: "assets/img/prism.png",
+      imageAlt: "PRISM lab console — live multi-model attack forecast session",
     },
     pixie: {
       art: "pixie",
@@ -208,6 +210,8 @@
       body: "A desktop overlay that actually talks. PySide6 avatar, Gemini chat, Coqui XTTS streaming at pause boundaries so it doesn't wait for the whole paragraph. Later: Moondream vision, and a Minecraft Fabric 'eyes' mod so the agent can walk the world with Baritone.",
       stack: "Python · PySide6 · Gemini · XTTS · Fabric",
       links: [["GitHub", "https://github.com/Pok8TheCoder/Pixie"]],
+      image: "assets/img/pixie.png",
+      imageAlt: "Pixie desktop avatar sitting against a night forest",
     },
     insight: {
       art: "insight",
@@ -276,6 +280,7 @@
   };
 
   const art = document.getElementById("stage-art");
+  const photo = document.getElementById("stage-photo");
   const kicker = document.getElementById("stage-kicker");
   const title = document.getElementById("stage-title");
   const body = document.getElementById("stage-body");
@@ -289,6 +294,17 @@
       liEl.classList.toggle("is-on", liEl.dataset.id === id);
     });
     art.dataset.art = p.art;
+    if (p.image) {
+      photo.hidden = false;
+      photo.src = p.image;
+      photo.alt = p.imageAlt || p.title;
+      art.classList.add("has-photo");
+    } else {
+      photo.hidden = true;
+      photo.removeAttribute("src");
+      photo.alt = "";
+      art.classList.remove("has-photo");
+    }
     kicker.textContent = p.kicker;
     title.textContent = p.title;
     body.textContent = p.body;
