@@ -86,7 +86,7 @@
     "PIXIE  xtts chunk  412ms",
     "ACAMS  face lock  bench-C",
     "ESP    sleep  idle=deep",
-    "OCI    arm 4c/24g  up",
+    "CLOUD  vm  up",
     "RAM    surprise snapshot k=3",
   ];
   const log = document.getElementById("tele-log");
@@ -200,8 +200,8 @@
     el("circle", { cx: 68, cy: 90, r: 5, fill: "#3f4f32" });
     el("circle", { cx: 68, cy: 136, r: 5, fill: "#e24a1c" });
     el("circle", { cx: 68, cy: 182, r: 5, fill: "#6f675c" });
-    el("text", { x: 18, y: 36, fill: "#e24a1c", "font-size": "12", "font-family": "IBM Plex Mono" }).textContent = "OCI  ·  4c/24g";
-    el("text", { x: 90, y: 250, fill: "#b7ad9e", "font-size": "11", "font-family": "IBM Plex Mono" }).textContent = "always-on · reserved IP";
+    el("text", { x: 18, y: 36, fill: "#e24a1c", "font-size": "12", "font-family": "IBM Plex Mono" }).textContent = "cloud  ·  always-on";
+    el("text", { x: 90, y: 250, fill: "#b7ad9e", "font-size": "11", "font-family": "IBM Plex Mono" }).textContent = "gcp → oracle · dns in front";
   }
 
   /* project explorer */
@@ -286,8 +286,8 @@
       art: "cloudbox",
       kicker: "cloud · always-on",
       title: "Always-on box",
-      body: "Consumer Minecraft hosts died on ping, so I stood up real VMs. GCP Compute Engine from Nov 2025–Feb 2026, then an Oracle Cloud always-free ARM instance (4 vCPU / 24 GB) that stays up for PRISM Docker labs. Reserved public IP, security lists, Cloudflare DNS, Caddy, Crafty at mc.pok8.me, Jupyter only on Tailscale.",
-      stack: "Oracle Cloud · GCP · Cloudflare · Caddy · Tailscale",
+      body: "Self-hosted VMs so labs can run overnight instead of on a laptop. Google Cloud first, then Oracle Cloud. DNS and a reverse proxy on pok8.me. Private access for anything that shouldn't be public.",
+      stack: "Oracle Cloud · GCP · Cloudflare · Caddy",
       links: [["pok8.me", "https://pok8.me"]],
     },
     glasses: {

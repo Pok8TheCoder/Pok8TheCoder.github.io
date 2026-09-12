@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=cloud">
+  <link rel="stylesheet" href="assets/css/style.css?v=cloud2">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%2314110e' width='32' height='32'/><text x='4' y='23' font-family='monospace' font-size='14' fill='%23e24a1c'>p8</text></svg>">
 </head>
 <body>
@@ -84,10 +84,10 @@
       <div class="ticker-track">
         <span>agent loops</span><span>ESP32 OTA</span><span>world models</span><span>YOLOv9</span>
         <span>NimBLE</span><span>InsightFace</span><span>FastAPI</span><span>PyTorch</span>
-        <span>Oracle Cloud</span><span>Tailscale</span><span>Caddy</span><span>Cloudflare</span>
+        <span>Oracle Cloud</span><span>GCP</span><span>Caddy</span><span>Cloudflare</span>
         <span>agent loops</span><span>ESP32 OTA</span><span>world models</span><span>YOLOv9</span>
         <span>NimBLE</span><span>InsightFace</span><span>FastAPI</span><span>PyTorch</span>
-        <span>Oracle Cloud</span><span>Tailscale</span><span>Caddy</span><span>Cloudflare</span>
+        <span>Oracle Cloud</span><span>GCP</span><span>Caddy</span><span>Cloudflare</span>
       </div>
     </div>
 
@@ -103,7 +103,7 @@
           </p>
           <p>
             Right now that's <strong>PRISM</strong> with Aryan &amp; Shaun — transformer world models
-            on network traffic, running Docker labs on an Oracle box that stays up.
+            on network traffic, on a cloud box that stays up.
             Previously: firmware internship at <strong>Mozek Healthtech</strong> (completed Aug 2026).
           </p>
         </div>
@@ -126,7 +126,7 @@
             </button>
             <button class="domain" data-domain="cloud" role="listitem">
               <b>Cloud</b>
-              <span>GCP VMs, Oracle always-free ARM, Cloudflare DNS, Caddy, Tailscale</span>
+              <span>GCP and Oracle VMs, DNS, reverse proxy</span>
             </button>
             <button class="domain" data-domain="vision" role="listitem">
               <b>Vision</b>
@@ -153,17 +153,15 @@
             </button>
             <div class="job-body">
               <div class="job-text">
-                <p>Started because consumer Minecraft hosts (Aternos / Exaroton) died on ping. Nov 2025–Feb 2026 I ran our own VMs on Google Cloud Compute Engine. That trial ended. This September the brief was different: PRISM's Docker attacker/target loop needs days of traffic, and I can't leave a PC on 24/7.</p>
+                <p>I run my own cloud boxes so long jobs don't have to sit on a laptop. Google Cloud first, then Oracle Cloud when I needed something that stays up.</p>
                 <ul>
-                  <li>Oracle Cloud always-free ARM instance — 4 vCPU, 24 GB RAM — still up, hosting most of the bench.</li>
-                  <li>VCN, subnet, reserved public IP (so the address doesn't change on reboot), security lists, opening the ports that actually have to be open.</li>
-                  <li>pok8.me via GitHub Student Pack / Namecheap; nameservers to Cloudflare; Caddy in front; Crafty at mc.pok8.me.</li>
-                  <li>JupyterLab on Tailscale only — own devices, no public login sitting on the VM.</li>
+                  <li>Always-on VMs for labs that have to run overnight — Docker, dashboards, the boring glue.</li>
+                  <li>DNS and a reverse proxy in front of pok8.me. Private access for anything that shouldn't be public.</li>
                 </ul>
               </div>
               <div class="flash" aria-label="Always-on box">
-                <p class="flash-label">constraint · always-on · free tier</p>
-                <p class="flash-note">4 vCPU · 24 GB · Oracle ARM<br>GCP Compute first. Oracle when the trial ran out. The point was a box that stays up so PRISM can generate traffic overnight.</p>
+                <p class="flash-label">constraint · always-on</p>
+                <p class="flash-note">A box that stays up. GCP, then Oracle. DNS in front. Nothing here is a how-to.</p>
               </div>
             </div>
           </article>
@@ -300,7 +298,7 @@
             </li>
             <li data-id="cloudbox" data-tags="cloud">
               <b>Always-on box</b>
-              <span>Oracle + Cloudflare</span>
+              <span>Oracle + GCP</span>
             </li>
             <li data-id="glasses" data-tags="embedded vision agents">
               <b>Spectacular Spectacles</b>
@@ -332,7 +330,7 @@
           </div>
           <div>
             <h3>talks to the rack</h3>
-            <p>GCP Compute Engine, Oracle Cloud (VCN / reserved IP / security lists), Tailscale, Linux</p>
+            <p>GCP, Oracle Cloud, Cloudflare, Linux</p>
           </div>
           <div>
             <h3>school</h3>
@@ -361,6 +359,6 @@
     <span>pok8.me · github pages</span>
   </footer>
 
-  <script src="assets/js/main.js?v=cloud"></script>
+  <script src="assets/js/main.js?v=cloud2"></script>
 </body>
 </html>
