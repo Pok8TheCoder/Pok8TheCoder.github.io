@@ -632,6 +632,24 @@ body.touch .catalog li { cursor: pointer; }
   border-right-color: var(--signal);
   animation: spin 4s linear infinite;
 }
+.stage-art[data-art="cloudbox"] {
+  background:
+    repeating-linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--paper) 8%, transparent) 0 18px,
+      transparent 18px 36px
+    ),
+    var(--ink);
+}
+.stage-art[data-art="cloudbox"]::after {
+  width: 46%;
+  height: 10px;
+  inset: auto;
+  left: 27%;
+  top: 42%;
+  background: var(--signal);
+  animation: fillbar 1.6s var(--ease) infinite alternate;
+}
 .stage-art[data-art="glasses"] {
   background: linear-gradient(#0e1a16, var(--ink));
 }
