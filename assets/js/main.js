@@ -286,9 +286,9 @@
       art: "cloudbox",
       kicker: "cloud · always-on",
       title: "Always-on box",
-      body: "Self-hosted VMs so labs can run overnight instead of on a laptop. Google Cloud first, then Oracle Cloud. DNS and a reverse proxy on pok8.me. Private access for anything that shouldn't be public.",
+      body: "Self-hosted VMs so labs can run overnight instead of on a laptop. Google Cloud first, then Oracle Cloud. DNS and a reverse proxy on pok8.dev. Private access for anything that shouldn't be public.",
       stack: "Oracle Cloud · GCP · Cloudflare · Caddy",
-      links: [["pok8.me", "https://pok8.me"]],
+      links: [["pok8.dev", "https://pok8.dev"]],
     },
     glasses: {
       art: "glasses",

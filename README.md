@@ -1,10 +1,10 @@
-# pok8.me
+# pok8.dev
 
-Personal portfolio site for **Samuel Joe D'Souza** — hosted on GitHub Pages at [pok8.me](https://pok8.me).
+Personal portfolio site for **Samuel Joe D'Souza** — hosted on GitHub Pages at [pok8.dev](https://pok8.dev).
 
 ## Deploy
 
-This repo powers `Pok8TheCoder.github.io` with custom domain `pok8.me`.
+This repo powers `Pok8TheCoder.github.io` with custom domain `pok8.dev`.
 
 ```bash
 git add .
